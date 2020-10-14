@@ -16,6 +16,9 @@
     "symfony/http-kernel": "^4.4",
     "davedevelopment/phpmig": "^1.7"
   },
+  "suggest": {
+    "ext-mongodb": "To be able to create migrations for MongoDB using provided MongoDBDriverManager"
+  },
   "autoload": {
     "psr-4": {
       "DosFarma\\MigrationsBundle\\": "src/"

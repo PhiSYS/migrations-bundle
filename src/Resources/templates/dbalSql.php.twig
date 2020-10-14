@@ -1,0 +1,38 @@
+<?php
+
+use Phpmig\Migration\Migration;
+
+class {{ className }} extends Migration
+{
+    /** Do the migration. */
+    public function up()
+    {
+        $this->executeQueries([
+            '/* SQL QUERY */',
+        ]);
+    }
+
+    /** Undo the migration. */
+    public function down()
+    {
+        $this->executeQueries([
+            '/* SQL QUERY */',
+        ]);
+    }
+
+    private function executeQueries(array $queries): void
+    {
+        $db = $this->getAdapterConnection();
+
+        foreach ($queries as $query) {
+            $db->executeQuery($query);
+        }
+    }
+
+    private function getAdapterConnection()
+    {
+        $container = $this->getContainer();
+
+        return $container->connection();
+    }
+}
