@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace DosFarma\MigrationsBundle\DependencyInjection\Compiler;
+namespace PhiSYS\MigrationsBundle\DependencyInjection\Compiler;
 
-use DosFarma\MigrationsBundle\Command\RollbackCommand;
+use PhiSYS\MigrationsBundle\Command\RollbackCommand;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 
 class RollbackCommandPass extends AbstractCommandPass

@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace DosFarma\MigrationsBundle\Infrastructure\Service\Phpmig;
+namespace PhiSYS\MigrationsBundle\Infrastructure\Service\Phpmig;
 
-use DosFarma\MigrationsBundle\Infrastructure\Service\Phpmig\Adapter\Adapter;
+use PhiSYS\MigrationsBundle\Infrastructure\Service\Phpmig\Adapter\Adapter;
 
 class ConfigurationContainer implements \ArrayAccess
 {

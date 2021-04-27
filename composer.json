@@ -1,27 +1,27 @@
 {
-  "name": "dosfarma/migrations-bundle",
+  "name": "phisys/migrations-bundle",
   "description": "Symfony framework integration bundle for phpmig",
   "type": "symfony-bundle",
   "authors": [
     {
-      "name": "David Strencsev",
-      "email": "david.strencsev@dosfarma.com"
+      "name": "David Strencsev"
     }
   ],
   "license": "MIT",
   "require": {
-    "php": "^7.4",
-    "symfony/console": "^4.4",
-    "symfony/dependency-injection": "^4.4|^5.0",
-    "symfony/http-kernel": "^4.4",
+    "php": "^7.4|^8.0",
+    "symfony/console": "4.*|5.*",
+    "symfony/dependency-injection": "4.*|5.*",
+    "symfony/http-kernel": "4.*|5.*",
     "davedevelopment/phpmig": "^1.7"
   },
   "suggest": {
+    "doctrine/dbal": "To be able to create migrations using Doctrine DBAL",
     "ext-mongodb": "To be able to create migrations for MongoDB using provided MongoDBDriverManager"
   },
   "autoload": {
     "psr-4": {
-      "DosFarma\\MigrationsBundle\\": "src/"
+      "PhiSYS\\MigrationsBundle\\": "src/"
     }
   }
 }

@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace DosFarma\MigrationsBundle\Command;
+namespace PhiSYS\MigrationsBundle\Command;
 
-use DosFarma\MigrationsBundle\Infrastructure\Service\Phpmig\ConfigurationContainer;
+use PhiSYS\MigrationsBundle\Infrastructure\Service\Phpmig\ConfigurationContainer;
 use Phpmig\Migration\Migration;
 use Phpmig\Migration\Migrator;
 use Symfony\Component\Console\Command\Command;

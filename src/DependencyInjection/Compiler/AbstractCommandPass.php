@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace DosFarma\MigrationsBundle\DependencyInjection\Compiler;
+namespace PhiSYS\MigrationsBundle\DependencyInjection\Compiler;
 
-use DosFarma\MigrationsBundle\Infrastructure\Service\Phpmig\ConfigurationContainer;
+use PhiSYS\MigrationsBundle\Infrastructure\Service\Phpmig\ConfigurationContainer;
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Definition;

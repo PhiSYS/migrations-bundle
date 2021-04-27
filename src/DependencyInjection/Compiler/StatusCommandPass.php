@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace DosFarma\MigrationsBundle\DependencyInjection\Compiler;
+namespace PhiSYS\MigrationsBundle\DependencyInjection\Compiler;
 
-use DosFarma\MigrationsBundle\Command\StatusCommand;
+use PhiSYS\MigrationsBundle\Command\StatusCommand;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 
 class StatusCommandPass extends AbstractCommandPass

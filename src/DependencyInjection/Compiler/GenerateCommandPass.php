@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace DosFarma\MigrationsBundle\DependencyInjection\Compiler;
+namespace PhiSYS\MigrationsBundle\DependencyInjection\Compiler;
 
-use DosFarma\MigrationsBundle\Command\GenerateCommand;
+use PhiSYS\MigrationsBundle\Command\GenerateCommand;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 
 class GenerateCommandPass extends AbstractCommandPass

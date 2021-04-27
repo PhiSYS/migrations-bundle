@@ -6,35 +6,35 @@ Symfony framework integration for davedevelopment/phpmig
 # config/bundles.php
 
 return [
-    DosFarma\MigrationsBundle\DosFarmaMigrationsBundle::class => ['dev' => true, 'test' => true],
+    PhiSYS\MigrationsBundle\PhiSYSMigrationsBundle::class => ['dev' => true, 'test' => true],
 ];
 ```
 ```yaml
 # services.yaml
 
 parameters:
-  dos_farma.migrations.migrations_directory: '%kernel.project_dir%/migrations/postgresql/'
-  dos_farma.migrations.migration_template: '%kernel.project_dir%/vendor/dosfarma/migrations-bundle/src/Resources/templates/dbalSql.php.twig'
-  dos_farma.migrations.control_table: 'serviceschema.migrations'
+  phisys.migrations.migrations_directory: '%kernel.project_dir%/migrations/postgresql/'
+  phisys.migrations.migration_template: '%kernel.project_dir%/vendor/phisys/migrations-bundle/src/Resources/templates/dbalSql.php.twig'
+  phisys.migrations.control_table: 'serviceschema.migrations'
 
 services:
-  DosFarma\MigrationsBundle\Infrastructure\Service\Phpmig\Adapter\Adapter:
-    class: DosFarma\MigrationsBundle\Infrastructure\Service\Phpmig\Adapter\DbalAdapter
+  PhiSYS\MigrationsBundle\Infrastructure\Service\Phpmig\Adapter\Adapter:
+    class: PhiSYS\MigrationsBundle\Infrastructure\Service\Phpmig\Adapter\DbalAdapter
     public: false
     autoconfigure: true
     arguments:
       $connection: '@connection.dbal.myservice' # Doctrine DBAL Connection
-      $tableName: '%dos_farma.migrations.control_table%'
+      $tableName: '%phisys.migrations.control_table%'
 
-  DosFarma\MigrationsBundle\Infrastructure\Service\Phpmig\ConfigurationContainer:
+  PhiSYS\MigrationsBundle\Infrastructure\Service\Phpmig\ConfigurationContainer:
     public: true
-    class: DosFarma\MigrationsBundle\Infrastructure\Service\Phpmig\ConfigurationContainer
+    class: PhiSYS\MigrationsBundle\Infrastructure\Service\Phpmig\ConfigurationContainer
     autoconfigure: true
-    factory: DosFarma\MigrationsBundle\Infrastructure\Service\Phpmig\ConfigurationContainer::from
+    factory: PhiSYS\MigrationsBundle\Infrastructure\Service\Phpmig\ConfigurationContainer::from
     arguments:
-      $adapter: '@DosFarma\MigrationsBundle\Infrastructure\Service\Phpmig\Adapter\Adapter'
-      $directory: '%dos_farma.migrations.migrations_directory%'
-      $template: '%dos_farma.migrations.migration_template%'
+      $adapter: '@PhiSYS\MigrationsBundle\Infrastructure\Service\Phpmig\Adapter\Adapter'
+      $directory: '%phisys.migrations.migrations_directory%'
+      $template: '%phisys.migrations.migration_template%'
 ```
 
 ## Usage

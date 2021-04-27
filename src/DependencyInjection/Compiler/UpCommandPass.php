@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace DosFarma\MigrationsBundle\DependencyInjection\Compiler;
+namespace PhiSYS\MigrationsBundle\DependencyInjection\Compiler;
 
-use DosFarma\MigrationsBundle\Command\UpCommand;
+use PhiSYS\MigrationsBundle\Command\UpCommand;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 
 class UpCommandPass extends AbstractCommandPass
